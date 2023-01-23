@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Tania Fernández - Front-End Developer</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__list--item"><a href="#home">Home</a></li>
+          <li class="nav__list--item"><a href="#about">Sobre mí</a></li>
+          <li class="nav__list--item"><a href="#projects">Proyectos</a></li>
+          <li class="nav__list--item"><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="home" id="home">
+        <div class="home-bg"></div>
+        <h1 class="main-title">Tania Fernández</h1>
+        <h2 class="subtitle">Front-End Developer</h2>
+      </section>
+      <section class="section" id="about">
+        <h2 class="section-title">Sobre mí</h2>
+        <p class="main-text">
+          Partiendo desde el mundo de la fotografía y habiendo hecho mis pinitos
+          en la animación tradicional, una mezcla entre curiosidad y muchas
+          ganas de mejorar mi futuro laboral han ido acercándome al campo
+          tecnológico, donde creo que mi capacidad de observación y la
+          experiencia en el mundo de la imagen pueden aportar mucho, y en el que
+          espero crecer cada día como programadora.
+        </p>
+      </section>
+      <section class="section" id="projects">
+        <h2 class="section-title">Proyectos</h2>
+        <nav class="projects__nav">
+          <ul class="projects__list">
+            <li class="projects__item">
+              <div>
+                <div class="img-cover"></div>
+                <img class="projects__item--img"
+                  src="./images/scr_openspaces.png"
+                  alt="Captura de pantalla del proyecto Open Spaces"
+                />
+              </div>
+              <h3 class="projects__item--title">Open Spaces</h3>
+              <p class="main-text">Proyecto individual <i class="fa-solid fa-person text-icon"></i></p>
+              <p class="projects__item--text">
+                Diseño responsive para tres versiones, realizado con HTML y
+                CSS(SASS).
+              </p>
+              <nav class="item-nav">
+                <a class="projects__item--link"
+                  href="https://github.com/tanferest/open-spaces-adalab"
+                  target="_blank"
+                  ><i class="fa-solid fa-code link-icon"></i
+                ></a>
+                <a class="projects__item--link"
+                  href="https://tanferest.github.io/open-spaces-adalab/"
+                  target="_blank"
+                  ><i class="fa-solid fa-link link-icon"></i
+                ></a>
+              </nav>
+            </li>
+            <li class="projects__item">
+              <div>
+                <div class="img-cover"></div>
+                <img class="projects__item--img"
+                  src="./images/scr_walkingcoders.png"
+                  alt="Captura de pantalla del proyecto The Walking Coders"
+                />
+              </div>
+              <h3 class="projects__item--title">The Walking Coders</h3>
+              <p>Proyecto en grupo <i class="fa-solid fa-people-group"></i></p>
+              <p>
+                Diseño responsive para tres versiones, realizado con HTML y
+                CSS(SASS).
+              </p>
+              <nav class="item-nav">
+                <a
+                  href="https://github.com/tanferest/the_walking_coders"
+                  target="_blank"
+                  ><i class="fa-solid fa-code"></i
+                ></a>
+                <a
+                  href="https://tanferest.github.io/the_walking_coders/"
+                  target="_blank"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </nav>
+            </li>
+            <li class="projects__item">
+              <div>
+                <div class="img-cover"></div>
+                <img class="projects__item--img"
+                  src="./images/scr_adacocktail.png"
+                  alt="Captura de pantalla del proyecto AdaCocktail"
+                />
+              </div>
+              <h3 class="projects__item--title">AdaCocktail</h3>
+              <p>Proyecto individual <i class="fa-solid fa-person"></i></p>
+              <p>
+                Aplicación web consistente en un buscador de cócteles que nos
+                permite marcar y desmarcar bebidas como favoritas. Realizado con
+                HTML, CSS y JavaScript. Integración de
+                <a href="https://www.thecocktaildb.com/" target="_blank"
+                  >APIs</a
+                >
+                de terceros.
+              </p>
+              <nav class="item-nav">
+                <a href="https://github.com/tanferest/adacocktail" target="_blank"
+                  ><i class="fa-solid fa-code"></i
+                ></a>
+                <a href="https://tanferest.github.io/adacocktail/" target="_blank"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </nav>
+            </li>
+            <li class="projects__item">
+              <div>
+                <div class="img-cover"></div>
+                <img class="projects__item--img"
+                  src="./images/scr_awesomeprofilecards.png"
+                  alt="Captura de pantalla del proyecto Awesome Profile Cards"
+                />
+              </div>
+              <h3 class="projects__item--title">Awesome Profile Cards</h3>
+              <p>Proyecto en grupo <i class="fa-solid fa-people-group"></i></p>
+              <p>
+                Aplicación web para crear, personalizar y compartir tu tarjeta
+                de contacto. Realizado con HTML, CSS y JavaScript.
+              </p>
+              <nav class="item-nav">
+                <a
+                  href="https://github.com/tanferest/awesomeprofilecards"
+                  target="_blank"
+                  ><i class="fa-solid fa-code"></i
+                ></a>
+                <a
+                  href="https://tanferest.github.io/awesomeprofilecards/"
+                  target="_blank"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </nav>
+            </li>
+            <li class="projects__item">
+              <div>
+                <div class="img-cover"></div>
+                <img class="projects__item--img"
+                  src="./images/scr_wowilson.png"
+                  alt="Captura de pantalla del proyecto WoWilson"
+                />
+              </div>
+              <h3 class="projects__item--title">WoWilson!</h3>
+              <p>Proyecto individual <i class="fa-solid fa-person"></i></p>
+              <p>
+                Página web que incluye un listado de las escenas de las
+                películas donde el actor Owen Wilson ha dicho 'Wow'. Hecho con
+                React y
+                <a
+                  href="https://owen-wilson-wow-api.onrender.com/"
+                  target="_blank"
+                  >API Wow de Owen Wilson</a
+                >.
+              </p>
+              <nav class="item-nav">
+                <a href="https://github.com/tanferest/WoWilson" target="_blank"
+                  ><i class="fa-solid fa-code"></i
+                ></a>
+                <a href="https://tanferest.github.io/WoWilson/" target="_blank"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </nav>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+    <footer>
+      <nav class="contact" id="contact">
+        <ul>
+          <li><a href="mailto:tanferest@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+          <li><a href="https://github.com/tanferest" target="_blank"><i class="fa-brands fa-github-alt"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/tanferest/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
