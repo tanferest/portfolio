@@ -37,6 +37,7 @@ li {
 
 .header__nav {
   width: 85%;
+  z-index: 3;
 }
 
 .nav__list {
@@ -117,7 +118,7 @@ li {
   text-align: justify;
 }
 
-/* ---- Proyectos ---- */
+/* ---- Projects ---- */
 
 .projects__list {
   display: grid;
@@ -254,5 +255,142 @@ li {
 
 
 /* ---- TABLET ---- */
+@media all and (min-width: 768px) {
 
+  /* ---- Home & global ---- */
+
+  .home {
+    margin-bottom: 50px;
+  }
+  .home-bg {
+    width: 450px;
+    height:200px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+  }
+
+  .main-title {
+    position: relative;
+    top: -20%;
+  }
+
+  .subtitle {
+    position: relative;
+    top: -20%;
+  }
+
+  .section {
+    padding: 0% 12% 70px 12%;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+/* ---- Projects ---- */
+
+  .projects__list {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .projects__item {
+    padding-top: 10%;
+  }
+
+  .projects__item--img {
+    width: 200px;
+    height: 200px;
+  }
+  .img-cover {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* ---- BG animation ---- */
+  .animated-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .bubble {
+    width: 150px;
+    height: 150px;
+    background-color: var(--second-bg);
+    border-radius: 50%;
+    position: absolute;
+  }
+  .bubble-1 {
+    left: 10%;
+    top: -10%;
+    animation: animate 11s alternate infinite;
+  }
+
+  .bubble-2 {
+    width: 100px;
+    height: 100px;
+    left: 60%;
+    bottom: 10px;
+    animation: animate 13s alternate infinite;
+  }
+
+  .bubble-3 {
+    width: 140px;
+    height: 140px;
+    left: -5%;
+    bottom: 5px;
+    animation: animate 8s alternate infinite;
+  }
+
+  .bubble-4 {
+    top: 30%;
+    right: -5%;
+    animation: animate2 9s alternate infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50px);
+    }
+  }
+
+  @keyframes animate2 {
+    0% {
+      transform: translate(0,0);
+    }
+    100% {
+      transform: translate(-70px, -70px);
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .header {
+    height: 80px;
+  }
+  .main-title {
+    top: -10%;
+  }
+  .subtitle {
+    top: -10%;
+  }
+  .home {
+    height: 250px;
+  }
+
+  .about-text {
+    max-width: 75%;
+  }
+
+  .bubble-3 {
+    bottom: 0;
+  }
+}
 /* ---- DESKTOP ---- */
