@@ -209,6 +209,45 @@ li {
   color: var(--main-color);
 }
 
+/* ---- RESUME ---- */
+.resume__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.resume__language {
+  color: var(--main-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.resume__btn {
+  width: 170px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: var(--main-color);
+  border-radius: 15px;
+  color: var(--second-color);
+  text-transform: uppercase;
+}
+
+.resume__btn:hover {
+  color: var(--main-color);
+  background-color: var(--background);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: .2s ease;
+}
+
+.resume__btn:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
 /* ---- FOOTER ---- */ 
 
 .footer {
@@ -309,6 +348,21 @@ li {
     height: 200px;
   }
 
+  /* ---- Resume ---- */
+    .resume {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 70px 20% 90px 20%;
+    }
+
+    .resume h2 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
   /* ---- BG animation ---- */
   .animated-bg {
     position: absolute;
@@ -371,6 +425,8 @@ li {
   }
 }
 
+/* ---- DESKTOP ---- */
+
 @media all and (min-width: 1024px) {
   .header {
     height: 80px;
@@ -389,8 +445,15 @@ li {
     max-width: 75%;
   }
 
+  .projects__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .resume {
+    justify-content: space-evenly;
+  }
+  
   .bubble-3 {
     bottom: 0;
   }
 }
-/* ---- DESKTOP ---- */
