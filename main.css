@@ -15,6 +15,16 @@
   --second-bg: rgba(27, 59, 70, 0.3);
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 a {
   text-decoration: none;
 }
@@ -26,6 +36,8 @@ li {
 /* -------- HEADER -------- */
 
 .header {
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 8vh;
   background-color: var(--main-color);
@@ -33,6 +45,7 @@ li {
   align-items: center;
   justify-content: center;
   font-size: 0.825rem;
+  z-index: 100;
 }
 
 .header__nav {
@@ -45,15 +58,39 @@ li {
   justify-content: space-evenly;
 }
 
-.nav__list--item a {
-  color: var(--second-color);
-  text-transform: uppercase;
+.nav__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item--link {
+  padding: 0 5px 5px 5px;
+      color: var(--second-color);
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom .3s ease;
+}
+
+.nav__item--link:hover {
+  border-bottom: 1px solid var(--second-color);
 }
 
 /* -------- MAIN -------- */
 
 .main {
+  position: relative;
   background-color: var(--background);
+}
+
+.main__text {
+  color: var(--main-color);
+  text-align: justify;
+}
+
+.main__top {
+  position: absolute;
+  top: -8vh;
 }
 
 /* ---- Home ---- */
@@ -65,10 +102,10 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 65px;
+  margin-bottom: 60px;
 }
 
-.home-bg {
+.home__bg {
   top: 0;
   position: absolute;
   background-color: var(--second-bg);
@@ -78,7 +115,7 @@ li {
   border-bottom-right-radius: 50%;
 }
 
-.main-title {
+.home__title {
   font-family: 'Libre Baskerville', serif;
   color: var(--main-color);
   text-transform: uppercase;
@@ -87,7 +124,7 @@ li {
   z-index: 1;
 }
 
-.subtitle {
+.home__subtitle {
   font-size: 1.5rem;
   color: var(--second-color);
   font-weight: 300;
@@ -95,6 +132,7 @@ li {
 }
 
 .section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +140,7 @@ li {
   overflow: hidden;
 }
 
-.section-title {
+.section__title {
   width: 40%;
   padding-bottom: 8px;
   color: var(--main-color);
@@ -113,12 +151,17 @@ li {
   margin-bottom: 25px;
 }
 
-.main-text {
-  color: var(--main-color);
-  text-align: justify;
+.about__top {
+  position: absolute;
+  top: -14vh;
 }
 
 /* ---- Projects ---- */
+
+.projects__top {
+  position: absolute;
+  top: -15vh;
+}
 
 .projects__list {
   display: grid;
@@ -132,7 +175,6 @@ li {
   text-align: justify;
   padding: 5%;
   margin-bottom: 35px;
-  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   background: linear-gradient(var(--background), var(--second-bg));
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -177,12 +219,17 @@ li {
   justify-content: space-evenly;
 }
 
+.item__link {
+  color: var(--background);
+  font-weight: 600;
+}
+
 .item__nav--link {
   color: var(--background);
   font-size: 1.2rem;
 }
 
-/* ---- Projects: ACTIVE STATES ---- */ 
+/* ---- Projects: ACTIVE STATES ---- */
 
 .img-cover {
   position: absolute;
@@ -202,6 +249,10 @@ li {
 }
 
 .text-link:hover {
+  text-decoration: underline;
+}
+
+.item__link:hover {
   text-decoration: underline;
 }
 
@@ -241,14 +292,15 @@ li {
   color: var(--main-color);
   background-color: var(--background);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .resume__btn:active {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-/* ---- FOOTER ---- */ 
+/* ---- FOOTER ---- */
 
 .footer {
   background-color: var(--main-color);
@@ -292,28 +344,26 @@ li {
   color: var(--main-color);
 }
 
-
 /* ---- TABLET ---- */
 @media all and (min-width: 768px) {
-
   /* ---- Home & global ---- */
 
   .home {
     margin-bottom: 50px;
   }
-  .home-bg {
+  .home__bg {
     width: 450px;
-    height:200px;
+    height: 200px;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
   }
 
-  .main-title {
+  .home__title {
     position: relative;
     top: -20%;
   }
 
-  .subtitle {
+  .home__subtitle {
     position: relative;
     top: -20%;
   }
@@ -322,11 +372,11 @@ li {
     padding: 0% 12% 70px 12%;
   }
 
-  .section-title {
-    margin-bottom: 35px;
+  .section__title {
+    margin-bottom: 55px;
   }
 
-/* ---- Projects ---- */
+  /* ---- Projects ---- */
 
   .projects__list {
     grid-template-rows: auto;
@@ -349,42 +399,42 @@ li {
   }
 
   /* ---- Resume ---- */
-    .resume {
-      position: relative;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 70px 20% 90px 20%;
-    }
+  .resume {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 20% 90px 20%;
+  }
 
-    .resume h2 {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  .resume__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   /* ---- BG animation ---- */
-  .animated-bg {
+  .animatedBg {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
-  .bubble {
+  .animatedBg__bubble {
     width: 150px;
     height: 150px;
     background-color: var(--second-bg);
     border-radius: 50%;
     position: absolute;
   }
-  .bubble-1 {
+  .animatedBg__bubble--1 {
     left: 10%;
     top: -10%;
     animation: animate 11s alternate infinite;
   }
 
-  .bubble-2 {
+  .animatedBg__bubble--2 {
     width: 100px;
     height: 100px;
     left: 60%;
@@ -392,7 +442,7 @@ li {
     animation: animate 13s alternate infinite;
   }
 
-  .bubble-3 {
+  .animatedBg__bubble--3 {
     width: 140px;
     height: 140px;
     left: -5%;
@@ -400,7 +450,7 @@ li {
     animation: animate 8s alternate infinite;
   }
 
-  .bubble-4 {
+  .animatedBg__bubble--4 {
     top: 30%;
     right: -5%;
     animation: animate2 9s alternate infinite;
@@ -417,7 +467,7 @@ li {
 
   @keyframes animate2 {
     0% {
-      transform: translate(0,0);
+      transform: translate(0, 0);
     }
     100% {
       transform: translate(-70px, -70px);
@@ -431,29 +481,29 @@ li {
   .header {
     height: 80px;
   }
-  .main-title {
+  .home__title {
     top: -10%;
   }
-  .subtitle {
+  .home__subtitle {
     top: -10%;
   }
   .home {
     height: 250px;
   }
 
-  .about-text {
+  .about-p {
     max-width: 75%;
   }
 
   .projects__list {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
+
   .resume {
     justify-content: space-evenly;
   }
-  
-  .bubble-3 {
+
+  .animatedBg__bubble--3 {
     bottom: 0;
   }
 }
